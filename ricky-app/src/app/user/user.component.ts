@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import {NgForOf, NgIf} from "@angular/common";
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [
-    NgForOf,
-    NgIf
-  ],
+  imports: [NgForOf, NgIf],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })
@@ -32,16 +29,13 @@ export class UserComponent {
       id: 4,
       name: 'Bloodborne',
       platform: 'Console',
-    }
+    },
   ];
-  isPcPlatform (platform: string) {
-     return platform.toLowerCase() === "pc" ? true : false
+  isPcPlatform(platform: string) {
+    return platform.toLowerCase() === 'pc' ? true : false;
   }
-  estoEsUnaPrueba () {
-  console.log('esto es una prueba')
-  return 'esto es una prueba'
-
+  estoEsUnaPrueba() {
+    console.log('esto es una prueba');
+    return 'esto es una prueba';
+  }
 }
-
-}
-
