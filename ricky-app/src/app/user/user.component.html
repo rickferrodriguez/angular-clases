@@ -1,0 +1,11 @@
+<ul>
+  @for (game of games; track game.id) {
+  <li>
+    <header>
+      <h3>{{ game.name }}</h3>
+    </header>
+    <main *ngIf="isPcPlatform(game.platform); else otherPlatform">💻</main>
+    <ng-template #otherPlatform> other </ng-template>
+  </li>
+  }
+</ul>
