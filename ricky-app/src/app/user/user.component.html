@@ -9,7 +9,7 @@
 </section>
 <app-games (addFavoriteEvent)="getFavorite($event)" userName="{{ userName }}" />
 
-<div>
-  <h3 *ngIf="favoriteGame !== ''">Lista de favoritos</h3>
-  <label>{{ favoriteGame }}</label>
+<div *ngIf="favoriteGame !== ''">
+  <h3>Lista de favoritos</h3>
+  <label>Tu juego favorito es: {{ favoriteGame }}</label>
 </div>
