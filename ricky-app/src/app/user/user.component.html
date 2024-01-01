@@ -1,11 +1,15 @@
-<ul>
-  @for (game of games; track game.id) {
-  <li>
-    <header>
-      <h3>{{ game.name }}</h3>
-    </header>
-    <main *ngIf="isPcPlatform(game.platform); else otherPlatform">💻</main>
-    <ng-template #otherPlatform> other </ng-template>
-  </li>
-  }
-</ul>
+<section>
+  <button (click)="itsOn = !itsOn">
+    @if (itsOn) {
+    <label>Encendido</label>
+    } @else {
+    <label>Apagado</label>
+    }
+  </button>
+</section>
+<app-games (addFavoriteEvent)="getFavorite($event)" userName="{{ userName }}" />
+
+<div>
+  <h3 *ngIf="favoriteGame !== ''">Lista de favoritos</h3>
+  <label>{{ favoriteGame }}</label>
+</div>

@@ -1,0 +1,15 @@
+<h3>Lista de juegos que le gustan a {{ userName }}</h3>
+<ul>
+  <li *ngFor="let game of games">
+    <header>
+      <span (click)="addFavorite(game.name)">
+        {{ game.name }}
+      </span>
+    </header>
+    <section *ngIf="isPcPlatform(game.platform); else nonPcPlatform">
+      💻 => PC
+    </section>
+
+    <ng-template #nonPcPlatform>Other</ng-template>
+  </li>
+</ul>
