@@ -1,27 +1,26 @@
-# RickyShopping
+## Enunciado
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+Crea una aplicación para buscar películas
 
-## Development server
+API a usar: - https://www.omdbapi.com/
+Consigue la API Key en la propia página web registrando tu email.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Requerimientos:
 
-## Code scaffolding
+[✅] Necesita mostrar un input para buscar la película y un botón para buscar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[✅] Lista las películas y muestra el título, año y poster.
 
-## Build
+[] Que el formulario funcione
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[] Haz que las películas se muestren en un grid responsive.
 
-## Running unit tests
+[] Hacer el fetching de datos a la API
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Primera iteración:
 
-## Running end-to-end tests
+[] Evitar que se haga la misma búsqueda dos veces seguidas.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[] Haz que la búsqueda se haga automáticamente al escribir.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[] Evita que se haga la búsqueda continuamente al escribir (debounce)

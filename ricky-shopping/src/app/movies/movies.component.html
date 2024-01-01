@@ -1,0 +1,15 @@
+<ul class="grid grid-cols-5 gap-2">
+  <li *ngFor="let movie of movies" class="w-[180px]">
+    <header>
+      <img
+        class="aspect-[3/4] object-contain w-[180px]"
+        src="{{ movie.Poster }}"
+        alt="{{ movie.Title }}"
+      />
+    </header>
+    <section class="px-2">
+      <h3 class="text-sm line-clamp-1 font-bold">{{ movie.Title }}</h3>
+      <span class="text-sm">{{ movie.Type }}</span>
+    </section>
+  </li>
+</ul>
