@@ -1,9 +1,9 @@
 <ul class="grid grid-cols-5 gap-2">
-  <li *ngFor="let movie of movies" class="w-[180px]">
+  <li *ngFor="let movie of movies">
     <header>
       <img
-        class="aspect-[3/4] object-contain w-[180px]"
-        src="{{ movie.Poster }}"
+        class="aspect-[3/4] object-contain w-[220px]"
+        [src]="movie.Poster"
         alt="{{ movie.Title }}"
       />
     </header>

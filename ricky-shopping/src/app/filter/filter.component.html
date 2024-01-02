@@ -1,5 +1,9 @@
-<form class="flex justify-center gap-2">
+<form
+  class="flex justify-center gap-2"
+  (submit)="getFilteredMovies(movieName.value); $event.preventDefault()"
+>
   <input
+    #movieName
     type="text"
     class="rounded-md border-gray-800 pr-2 pl-1 border-2"
     name="movie-name"

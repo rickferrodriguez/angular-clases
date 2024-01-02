@@ -1,6 +1,6 @@
 <h1 class="font-bold text-3xl text-center mb-4">Movie Finder</h1>
 
 <header class="flex flex-col gap-8 mx-5">
-  <app-filter></app-filter>
-  <app-movies [movies]="movieData" />
+  <app-filter (addFilterEvent)="getFilteredMovies($event)"></app-filter>
+  <app-movies [movies]="filteredMovies" />
 </header>

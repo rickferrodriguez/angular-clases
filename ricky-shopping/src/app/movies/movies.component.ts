@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { Movietype } from '../movietype';
 
-  type MoviesType = {Title: string, Year: string, imdbID: string, Type: string, Poster: string }
 @Component({
   selector: 'app-movies',
   standalone: true,
@@ -9,5 +9,5 @@ import { NgFor } from '@angular/common';
   templateUrl: './movies.component.html',
 })
 export class MoviesComponent {
-@Input() movies: Array<MoviesType> = [];
+@Input() movies: Array<Movietype> = [];
 }

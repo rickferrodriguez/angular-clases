@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './filter.component.html',
 })
 export class FilterComponent {
+  @Output() addFilterEvent = new EventEmitter<string>();
 
+  getFilteredMovies(movieName: string) {
+    this.addFilterEvent.emit(movieName);
+  }
 }

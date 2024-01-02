@@ -4,14 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { FilterComponent } from './filter/filter.component';
 import { MoviesComponent } from './movies/movies.component';
 import { Search } from '../mocks/with_results.json';
+import { Movietype } from './movietype';
 
-type MoviesType = {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
-};
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,5 +15,16 @@ type MoviesType = {
 })
 export class AppComponent {
   title = 'ricky-shopping';
-  movieData: MoviesType[] = Search;
+  movieData: Movietype[] = Search;
+  filteredMovies: Movietype[] = [];
+
+  getFilteredMovies(name: string) {
+    if(name === '') {
+      this.filteredMovies = [];
+      return
+    } else {
+      this.filteredMovies = this.movieData.filter(movie => movie.Title.toLowerCase().includes(name.toLowerCase()));
+      // this.filteredMovies = this.movieData
+    }
+  }
 }
